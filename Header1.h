@@ -17,4 +17,4 @@ public:
 
 };
 
-void printMatrix(matrix m);
+void printMatrix(matrix* m,int size);

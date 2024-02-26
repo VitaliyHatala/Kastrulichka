@@ -13,4 +13,4 @@ public:
 	bool operator+(istream& is, matrix2& m);
 	bool operator-(istream& is, matrix2& m);
 };
-void printMatrix(matrix2 m);
+void printMatrix(matrix2* m,int size);
