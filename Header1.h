@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -11,10 +12,9 @@ public:
 	matrix(const matrix& m);
 	friend ostream& operator<<(ostream& os, const matrix& m);
 	friend istream& operator>>(istream& is, matrix& m);
-	bool operator+(istream& is, matrix& m);
-	bool operator-(istream& is, matrix& m);
-	
+	//bool operator+(istream& is, matrix& m);
+	//bool operator-(istream& is, matrix& m);
 
 };
 
-void printMatrix(matrix* m,int size);
+//void printMatrix(matrix* m, int rows,int cols);
