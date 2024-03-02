@@ -6,7 +6,7 @@
 using namespace std;
 
 class matrix {
-private:
+protected:
 	int rows;
 	int col;
 	int** array;
