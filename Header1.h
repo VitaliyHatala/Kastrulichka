@@ -18,6 +18,9 @@ public:
 	friend istream& operator>>(istream& is, matrix& m);
 	bool operator+(istream& is, matrix& m);
 	bool operator-(istream& is, matrix& m);
+
+	int getRows() { return rows; }
+	int getCols() { return cols; }
 };
 
 void printMatrix(matrix* m, int size);
