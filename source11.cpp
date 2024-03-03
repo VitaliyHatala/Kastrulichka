@@ -1,12 +1,7 @@
 #include "Header11.h"
 
-void matrix2::fillWithOnes() 
-{
-    for (int i = 0; i < getRows(); ++i) 
-    {
-        for (int j = 0; j < getCols(); ++j)
-        {
-            arr[i][j] = 1;
-        }
-    }
+matrix2::matrix2() : matrix() {}
+matrix2::matrix2(int r, int c, int** a) : matrix(r, c, a) {}
+matrix2::matrix2(matrix& m) : matrix(m) {}void matrix2::PrintM()
+{ cout << element << " ";
 }
