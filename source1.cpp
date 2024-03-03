@@ -1,16 +1,16 @@
 #include "Header1.h"
+matrix2::matrix2() : matrix(){}
 
-matrix::matrix() : rows(0), cols(0) {}
+matrix2::matrix2(int r, int c, int ** a) : matrix(r, c, a){}
 
-matrix::matrix(int r, int c) : row(r), col(c) {}
-
-matrix::matrix(const matrix& m) : row(m.row), col(m.col) {}
+matrix2::matrix2(matrix& m) : matrix(m) {};
 
 ostream& operator<<(ostream& os, const matrix& m)
 {
-	for (int i = 0; i < m.row; i++) {
-		for (int j = 0; j < m.col; j++) {
-			os << m[i][j] << ' ';
+	os << m.rows << "\t" << m.cols;
+	for (int i = 0; i < m.rows; i++) {
+		for (int j = 0; j < m.cols; j++) {
+			os << m.array[i][j] << ' ';
 		}
 		cout << endl;
 	}
@@ -19,20 +19,22 @@ ostream& operator<<(ostream& os, const matrix& m)
 
 istream& operator>>(istream& is, matrix& m)
 {
-	for (int i = 0; i < m.row; i++) {
-		for (int j = 0; j < m.col; j++) {
-			is >> m[i][j];
+	is >> m.rows >> m.cols;
+	for (int i = 0; i < m.rows; i++) {
+		for (int j = 0; j < m.cols; j++) {
+			is >> m.array[i][j];
 		}
 	}
 	return is;
 }
 
+
 //void printMatrix(matrix* m, int rows,int cols)
 //{
-//  for (int i = 0; i < rows; i++) {
-//    for (int j = 0; j < cols; j++) {
-//      cout << m[i][j] << ' ';
-//    }
-//    cout << endl;
-//  }
+// Â for (int i = 0; i < rows; i++) {
+// Â  Â for (int j = 0; j < cols; j++) {
+// Â  Â  Â cout << m[i][j] << ' ';
+// Â  Â }
+// Â  Â cout << endl;
+// Â }
 //}
