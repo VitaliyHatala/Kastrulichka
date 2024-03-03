@@ -14,7 +14,7 @@ int main()
     int** array2 = new int* [4];
     for (int i = 0; i < 4; i++)
     {
-        array2 = new int*[4];
+        array2 = new int* [4];
     }
 
     while (!file.eof())
@@ -55,7 +55,7 @@ int main()
 
     cout << endl;
 
-    int row,col;
+    int row, col;
 
 
     cout << "Enter rows: "; cin >> row; cout << "Enter cols: "; cin >> col; cout << endl;
