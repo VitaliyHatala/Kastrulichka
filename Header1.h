@@ -1,7 +1,7 @@
-#pragma once
-#include <fstream>
-#include <iostream>
-#include <string>
+#pragma once 
+#include <fstream> 
+#include <iostream> 
+#include <string> 
 
 using namespace std;
 
@@ -16,11 +16,8 @@ public:
 	matrix(const matrix& m);
 	friend ostream& operator<<(ostream& os, const matrix& m);
 	friend istream& operator>>(istream& is, matrix& m);
-	bool operator+(matrix& m);
-	bool operator-(matrix& m);
 
 	int getRows() { return rows; }
 	int getCols() { return cols; }
+	int getValue(int i, int j) { return array[i][j]; }
 };
-
-void printMatrix(matrix* m, int size);
