@@ -8,7 +8,7 @@ using namespace std;
 class matrix {
 protected:
 	int rows;
-	int col;
+	int cols;
 	int** array;
 public:
 	matrix();
@@ -16,8 +16,8 @@ public:
 	matrix(const matrix& m);
 	friend ostream& operator<<(ostream& os, const matrix& m);
 	friend istream& operator>>(istream& is, matrix& m);
-	bool operator+(istream& is, matrix& m);
-	bool operator-(istream& is, matrix& m);
+	bool operator+(matrix& m);
+	bool operator-(matrix& m);
 
 	int getRows() { return rows; }
 	int getCols() { return cols; }
